@@ -1,26 +1,19 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import "./App.css";
+import LeftTree from "./components/tree-branches/leftTree/left-tree-branch";
+import RighTree from "./components/tree-branches/rightTree/right-tree-branch";
+import BothTree from "./components/tree-branches/bothTree/both-tree-branches";
+import BottomTree from "./components/tree-branches/bottomTree/bottomTree";
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.tsx</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+      <section>
+        <LeftTree />
+        <RighTree />
+        <BothTree />
+        <BottomTree />
+      </section>
     );
   }
 }
