@@ -2,7 +2,7 @@ import * as React from "react";
 import { NavLink } from "react-router-dom";
 import styles from "./menu.module.scss";
 import heading from "../../imgs/Heading.png";
-import monkey from "../../imgs/chimp.gif";
+import monkey from "../../imgs/monkey.gif";
 
 export interface IProps {}
 
