@@ -1,4 +1,5 @@
-.menu {
+//scss
+.menuFrame {
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -6,38 +7,38 @@
   justify-content: center;
   align-items: center;
   background-color: #ffffe3;
-}
-
-.heading {
-  font-size: 400%;
-}
-
-.playButtonFrame {
-  width: 120px;
-  height: 60px;
-  margin: 30px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.playButton {
-  width: 200px;
-  height: 50px;
-  font-size: 200%;
-  font-weight: bold;
-  border: 1px solid #291708;
-  background-color: rgba(107, 62, 24, 0.8);
-}
-
-.playButton:hover {
-  cursor: pointer;
-  width: 180px;
-  height: 45px;
-  font-size: 180%;
-}
-
-.gif {
-  width: 295px;
-  height: 460px;
+  .heading {
+    font-size: 400%;
+  }
+  .playButtonFrame {
+    width: 120px;
+    height: 60px;
+    margin: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .playButton {
+      width: 180px;
+      height: 45px;
+      font-size: 180%;
+      font-weight: bold;
+      border: 1px solid #291708;
+      background-color: rgba(107, 62, 24, 0.8);
+      &:hover {
+        cursor: pointer;
+        width: 200px;
+        height: 50px;
+        font-size: 200%;
+      }
+      &:active {
+        width: 180px;
+        height: 45px;
+        font-size: 180%;
+      }
+    }
+  }
+  .gif {
+    width: 300px;
+    height: auto;
+  }
 }

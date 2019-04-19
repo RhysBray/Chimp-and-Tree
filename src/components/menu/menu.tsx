@@ -1,6 +1,7 @@
 import * as React from "react";
 import { NavLink } from "react-router-dom";
 import styles from "./menu.module.scss";
+import monkey from "../../imgs/chimp.gif";
 
 export interface IProps {}
 
@@ -10,7 +11,7 @@ class Menu extends React.Component<IProps, IState> {
   // state = { :  }
   public render() {
     return (
-      <section className={styles.menu}>
+      <section className={styles.menuFrame}>
         <h1 className={styles.heading}>Chimp-And-Tree</h1>
 
         <div className={styles.playButtonFrame}>
@@ -18,11 +19,7 @@ class Menu extends React.Component<IProps, IState> {
             <button className={styles.playButton}>Play</button>
           </NavLink>
         </div>
-        <iframe
-          src="https://giphy.com/embed/ZB7aRByErN115YPgSO"
-          className={styles.gif}
-          allowFullScreen
-        />
+        <img src={monkey} className={styles.gif} />
       </section>
     );
   }

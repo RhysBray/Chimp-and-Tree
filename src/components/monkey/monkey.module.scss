@@ -1,9 +1,11 @@
+//inheritance
 %monkey {
   width: 300px;
   height: 350px;
   top: 30px;
 }
 
+//scss
 .monkeyFrame {
   position: absolute;
   z-index: 10;
@@ -12,14 +14,13 @@
   display: flex;
   justify-content: center;
   align-items: flex-end;
-}
+  .monkeyLeft {
+    @extend %monkey;
+    transform: rotateY(180deg);
+  }
 
-.monkey-left {
-  @extend %monkey;
-  transform: rotateY(180deg);
-}
-
-.monkey.right {
-  @extend %monkey;
-  transform: rotateY(360deg);
+  .monkeyRight {
+    @extend %monkey;
+    transform: rotateY(360deg);
+  }
 }
