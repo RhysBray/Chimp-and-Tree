@@ -15,12 +15,25 @@ export interface IState {
 
 class PlayGame extends React.Component<IProps, IState> {
   public state = { branch: "" };
-  public random = Math.floor(Math.random() * 3 + 1);
 
   public branchRand() {
-    if (this.random === 1) {
+    let random = Math.floor(Math.random() * 3 + 1);
+
+    // switch (random) {
+    //   case 1:
+    //     this.state.branch = LeftBranch;
+    //     return;
+    //   case 2:
+    //     this.state.branch = RightBranch;
+    //     return;
+    //   case 3:
+    //     this.state.branch = BothBranches;
+    //     return;
+    // }
+
+    if (random === 1) {
       this.state.branch = LeftBranch;
-    } else if (this.random === 2) {
+    } else if (random === 2) {
       this.state.branch = RightBranch;
     } else {
       this.state.branch = BothBranches;
@@ -28,8 +41,15 @@ class PlayGame extends React.Component<IProps, IState> {
   }
 
   public render() {
+    let branchArray = ["branch", "branch"];
     return (
       <div className={styles.gameContainer}>
+        {this.branchRand()}
+        <Branch branch={this.state.branch} />
+        {this.branchRand()}
+        <Branch branch={this.state.branch} />
+        {this.branchRand()}
+        <Branch branch={this.state.branch} />
         {this.branchRand()}
         <Branch branch={this.state.branch} />
         {this.branchRand()}
