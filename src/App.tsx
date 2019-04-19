@@ -1,18 +1,20 @@
 import React, { Component } from "react";
 import "./App.css";
-import LeftTree from "./components/tree-branches/leftTree/left-tree-branch";
-import RighTree from "./components/tree-branches/rightTree/right-tree-branch";
-import BothTree from "./components/tree-branches/bothTree/both-tree-branches";
-import BottomTree from "./components/tree-branches/bottomTree/bottomTree";
+import { Route, Switch, Redirect } from "react-router-dom";
+import PlayGame from "./containers/game-play";
+import Menu from "./components/menu/menu";
+import PageNotFound from "./containers/not-found";
 
 class App extends Component {
   render() {
     return (
       <section>
-        <LeftTree />
-        <RighTree />
-        <BothTree />
-        <BottomTree />
+        <Switch>
+          <Route path="/page-not-found" component={PageNotFound} />
+          <Route path="/(menu|)" component={Menu} />
+          <Route path="/play" component={PlayGame} />
+          <Redirect to="/page-not-found" />
+        </Switch>
       </section>
     );
   }

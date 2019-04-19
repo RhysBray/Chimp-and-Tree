@@ -1,0 +1,25 @@
+%monkey {
+  width: 300px;
+  height: 350px;
+  top: 30px;
+}
+
+.monkeyFrame {
+  position: absolute;
+  z-index: 10;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.monkey-left {
+  @extend %monkey;
+  transform: rotateY(180deg);
+}
+
+.monkey.right {
+  @extend %monkey;
+  transform: rotateY(360deg);
+}
