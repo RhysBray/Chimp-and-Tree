@@ -5,3 +5,17 @@
   justify-content: flex-end;
   overflow: hidden;
 }
+
+.branchContainer {
+  width: 100vw;
+  min-height: 33vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  .bottomBranch {
+    width: 50%;
+    min-height: 100%;
+  }
+}
