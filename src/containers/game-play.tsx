@@ -7,6 +7,7 @@ import rightBranch from "../imgs/rightBranch.png";
 import bothBranches from "../imgs/bothBranches.png";
 import bottomBranch from "../imgs/bottomBranch.png";
 import Monkey from "../components/monkey/monkey";
+import Layout from "../components/key-pressed";
 
 export interface IProps {}
 
@@ -37,6 +38,7 @@ class PlayGame extends React.Component<IProps, IState> {
           return <Branch branch={index} />;
         })}
         <Monkey />
+        <Layout />
       </div>
     );
   }
