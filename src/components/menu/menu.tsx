@@ -13,7 +13,9 @@ class Menu extends React.Component<IProps, IState> {
   public render() {
     return (
       <section className={styles.menuFrame}>
-        <img className={styles.chimpAndTree} src={heading} />
+        <div className={styles.titleFrame}>
+          <img className={styles.chimpAndTree} src={heading} />
+        </div>
 
         <div className={styles.playButtonFrame}>
           <NavLink to="/play">
