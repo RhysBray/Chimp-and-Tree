@@ -1,0 +1,58 @@
+.pauseFrame {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .pauseMenu {
+    width: 80vw;
+    height: 80vh;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: rgba(241, 245, 18, 0.5);
+    border: 2px solid black;
+
+    .pauseTitle {
+      font-size: 100pt;
+    }
+
+    .menuButtonFrame {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 50vw;
+      height: 20vh;
+      .menuButton {
+        width: 30vw;
+        height: 10vh;
+        cursor: pointer;
+        font-size: 300%;
+        font-weight: bold;
+        border: 1px solid #291708;
+        background-color: rgb(180, 157, 111);
+        border-radius: 20px;
+        text-decoration: none;
+        margin: 30px;
+        color: rgb(0, 0, 0);
+        &:hover {
+          cursor: pointer;
+          width: 35vw;
+          height: 12vh;
+          font-size: 350%;
+        }
+        &:active {
+          width: 30vw;
+          height: 10vh;
+          font-size: 300%;
+        }
+      }
+    }
+  }
+}

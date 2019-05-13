@@ -15,13 +15,14 @@
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  .monkeyRight {
-    @extend %monkey;
-    transform: rotateY(180deg);
-  }
+}
 
-  .monkeyLeft {
-    @extend %monkey;
-    transform: rotateY(360deg);
-  }
+.monkeyRight {
+  @extend %monkey;
+  transform: rotateY(180deg);
+}
+
+.monkeyLeft {
+  @extend %monkey;
+  transform: rotateY(360deg);
 }

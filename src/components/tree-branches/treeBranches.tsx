@@ -12,7 +12,7 @@ class Branch extends React.Component<IProps, IState> {
     return (
       <div className={styles.branchContainer}>
         <img className={styles.branch} src={this.props.branch} />
-        {console.log(this.props.branch)}
+        {/* {console.log(this.props.branch)} */}
       </div>
     );
   }

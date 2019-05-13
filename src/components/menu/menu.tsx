@@ -22,7 +22,7 @@ class Menu extends React.Component<IProps, IState> {
             <button className={styles.playButton}>Play</button>
           </NavLink>
         </div>
-        <img src={monkey} className={styles.gif} />
+        {/* <img src={monkey} className={styles.gif} /> */}
       </section>
     );
   }
