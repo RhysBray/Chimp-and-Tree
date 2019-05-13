@@ -7,13 +7,17 @@
   // justify-content: center;
   align-items: center;
   background-color: #ffffe3;
+  background-image: url("../../imgs//menu-background.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   .titleFrame {
     width: 90vw;
-    display: flex;
-    flex-direction: column;
-    // justify-content: center;
-    align-items: center;
-
+    background-image: url("../../imgs/cloud.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100vw 30vh;
     .chimpAndTree {
       width: 90vw;
     }
@@ -31,7 +35,8 @@
       font-size: 300%;
       font-weight: bold;
       border: 1px solid #291708;
-      background-color: rgba(107, 62, 24, 0.8);
+      background-color: rgba(206, 224, 36, 0.747);
+      border-radius: 20px;
       &:hover {
         cursor: pointer;
         width: 35vw;

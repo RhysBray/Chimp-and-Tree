@@ -1,32 +1,34 @@
 //action type
-export const SET_SEARCH_TEXT = "SET_SEARCH_TEXT";
+export const CHECK_KEY_PRESSED = "CHECK_KEY_PRESSED";
 
 // action creators
-export const setSearchText = (searchText: string): ISetSearchTextAction => ({
-  type: SET_SEARCH_TEXT,
-  searchText
+export const checkKeyPressed = (
+  keyPressed: number
+): ICheckKeyPressedAction => ({
+  type: CHECK_KEY_PRESSED,
+  keyPressed
 });
 
-export interface ISetSearchTextAction {
-  type: typeof SET_SEARCH_TEXT;
-  searchText: string;
+export interface ICheckKeyPressedAction {
+  type: typeof CHECK_KEY_PRESSED;
+  keyPressed: number;
 }
 
-type IGeneralActions = ISetSearchTextAction;
+type IGeneralActions = ICheckKeyPressedAction;
 
 export interface IGeneralState {
-  searchText: string;
+  keyPressed: number;
 }
 
 // reducer with initial state
 const initialState: IGeneralState = {
-  searchText: ""
+  keyPressed: 39
 };
 
 const generalReducer = (state = initialState, action: IGeneralActions) => {
   switch (action.type) {
-    case SET_SEARCH_TEXT:
-      return { ...state, searchText: action.searchText };
+    case CHECK_KEY_PRESSED:
+      return { ...state, keyPressed: action.keyPressed };
     default:
       return state;
   }

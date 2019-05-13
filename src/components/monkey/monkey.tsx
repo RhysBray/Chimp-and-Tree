@@ -2,23 +2,21 @@ import * as React from "react";
 import styles from "./monkey.module.scss";
 import monkey from "../../imgs/monkey.png";
 
-export interface IProps {}
-
-export interface IState {
-  flippedMonkey: any;
+export interface IProps {
   isFlipped: boolean;
 }
 
-class Monkey extends React.Component<IProps, IState> {
-  public state = { flippedMonkey: styles.monkeyLeft, isFlipped: false };
+export interface IState {}
 
+class Monkey extends React.Component<IProps, IState> {
   public render() {
+    const flipped = this.props.isFlipped
+      ? styles.monkeyRight
+      : styles.monkeyLeft;
     return (
       <div className={styles.monkeyFrame}>
-        <img
-          className={`${styles.monkey} ${this.state.flippedMonkey}`}
-          src={monkey}
-        />
+        <img className={`${styles.monkey} ${flipped}`} src={monkey} />
+        {console.log(this.props.isFlipped)}
       </div>
     );
   }
